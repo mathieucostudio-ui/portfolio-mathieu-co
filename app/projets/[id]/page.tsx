@@ -43,20 +43,21 @@ export default async function ProjetPage({
 
   const { prev, next } = getAdjacentProjets(id)
 
-  let allImages: { id: string; name: string; url: string }[] = []
-  try {
-    allImages = await getImagesFromFolder(projet.driveId)
-  } catch {
-    allImages = []
-  }
-
-  // Filter and reorder by selectedImages when defined
-  let images = allImages
+  // If selectedImages is defined, build image objects directly — no Drive API call needed
+  let images: { id: string; name: string; url: string }[] = []
   if (projet.selectedImages && projet.selectedImages.length > 0) {
-    const indexed = new Map(allImages.map((img) => [img.id, img]))
-    images = projet.selectedImages
-      .map((id) => indexed.get(id))
-      .filter((img): img is { id: string; name: string; url: string } => img !== undefined)
+    images = projet.selectedImages.map((imgId) => ({
+      id: imgId,
+      name: imgId,
+      url: `https://lh3.googleusercontent.com/d/${imgId}`,
+    }))
+  } else {
+    // Fallback: fetch from Drive API for projects without selectedImages
+    try {
+      images = await getImagesFromFolder(projet.driveId)
+    } catch {
+      images = []
+    }
   }
 
   const heroImage = images[0] ?? null
