@@ -1,0 +1,192 @@
+[
+  {
+    "id": "piscine",
+    "num": "01",
+    "titre": "Espace Piscine & Bar",
+    "lieu": "Fidjrossè, Cotonou",
+    "type": "Aménagement Outdoor",
+    "palette": "144 m² · Iroko · Pergola",
+    "description": "Un espace de détente alliant piscine sur mesure, bar en bois d'iroko et pergola végétalisée. Une oasis tropicale pensée pour le confort et l'esthétique, où chaque détail célèbre les matériaux locaux.",
+    "tags": ["Piscine", "Bar", "Pergola", "Outdoor"],
+    "driveId": "1GVtvKD2pG3XPjP5yf5Bn3XymB1NeQNIo",
+    "heroImageId": "1hge5q5rFiN2BUk6avIPkTBBUxpW6_GWu",
+    "selectedImages": [
+      "1KEupThlODDkz7HQqyUEm1iRxmfXCE3_V",
+      "1AbmBzb2o5x3t7vq6ltvVsQBo6egtPKLx",
+      "1hge5q5rFiN2BUk6avIPkTBBUxpW6_GWu",
+      "15GrBEEIe6LpwleP0QaFdT1kgrWZ-VjcB",
+      "1yI0h2PCDiCsKLmvrH-4RDOPtGos6c2FZ",
+      "1P5xbIiIYkOW2cerDCJMr6gnxF4qakf7N",
+      "1evBe6QMCNkMD84WBotce8xzQ5GXMktgd",
+      "1BnJJaMyl9Ac5a1WHmUS2MJtbXr17GYsj",
+      "1NYx3z2HvXnUlFP0aOrnoJqGuuBV8Akyu"
+    ]
+  },
+  {
+    "id": "mr-phil",
+    "num": "02",
+    "titre": "Résidence Mr. Phil",
+    "lieu": "Sémè Carrefour",
+    "type": "Design Intérieur",
+    "palette": "Villa · Séjour · Suite",
+    "description": "Réaménagement complet d'une villa résidentielle avec une approche contemporaine africaine. Matériaux nobles, éclairage architectural et mobilier sur mesure pour un cadre de vie exceptionnel.",
+    "tags": ["Villa", "Résidentiel", "Design Intérieur"],
+    "driveId": "1vCnsRg-3KstD1ywbQuj5JrHYyEUYyy1d",
+    "selectedImages": [
+      "1rRFGta-FUH4r0yuWQ9UlyUewvYNfKJMh",
+      "1Fz8F9fUl_Ic4vUh81PprthDVgndYUx2I",
+      "1GwsrwU4g5bXk7twW8NF81Z71vP21TRlL",
+      "1LfwgKi8SxSYiLLaqFtLYpQdjBXotsAnT",
+      "1M02uHEqypAlYB6rij2bjEeU2cQ6qMhz-"
+    ]
+  },
+  {
+    "id": "akogbato-retenue",
+    "num": "03",
+    "titre": "Villa Akogbato",
+    "lieu": "Akogbato, Cotonou",
+    "type": "Architecture Résidentielle",
+    "palette": "Proposition Retenue · 320 m²",
+    "description": "Villa résidentielle contemporaine avec terrasse panoramique, piscine à débordement et jardin tropical. La proposition retenue par le client pour sa cohérence entre modernité et ancrage local.",
+    "tags": ["Villa", "Architecture", "Piscine"],
+    "driveId": "12vspD6ipW6CaJ4tBiIiktCKsh6IaNfXB",
+    "selectedImages": [
+      "1IEasZnDsuoaKi5sQaJkU40ZC1biN93zo",
+      "13tcJ3_aUt86osmDO_r_3KVwJgx13uUJj",
+      "156wDeOcR1yve6o43ymlwPdTQU-h1r5dS",
+      "1bpodOawfjMRn2S0eFec5FOLei0ptR04A",
+      "1mj70aXYY9C3wHLARH9fOdHoIwX3ZBmtS"
+    ]
+  },
+  {
+    "id": "akogbato-prop1",
+    "num": "04",
+    "titre": "Villa Akogbato",
+    "lieu": "Akogbato, Cotonou",
+    "type": "Architecture Résidentielle",
+    "palette": "Proposition 1 · 320 m²",
+    "description": "Première proposition architecturale pour cette villa résidentielle, explorant des volumes épurés et une intégration paysagère forte. Un dialogue entre architecture et végétation tropicale.",
+    "tags": ["Villa", "Architecture", "Concept"],
+    "driveId": "1Pat_FSGuP9fse8PhzG0U9hDsDYFOXIvi",
+    "selectedImages": [
+      "1jz0TvWzsFQZE7B_Yx-idMkFRSK5SYgfG",
+      "1bhAoxPDhi4LaltB5uiowhqBoXIwltaNB",
+      "1IjsX6vM-2WgDYdZS1ouycz2b4EBMRNDU",
+      "1VkL_h9vt7_e47CXJ06JwYtReogWC6Lt_",
+      "1QsD5LPvtMSSBNLiQtUmkHIXdT_Tb87gA"
+    ]
+  },
+  {
+    "id": "presbytere",
+    "num": "05",
+    "titre": "Presbytère",
+    "lieu": "Cotonou",
+    "type": "Design Intérieur",
+    "palette": "Séjour · Salle à Manger",
+    "description": "Rénovation et réaménagement du séjour et de la salle à manger d'un presbytère. Un espace de vie chaleureux alliant recueillement et confort contemporain, avec des matières douces et une lumière maîtrisée.",
+    "tags": ["Séjour", "Salle à Manger", "Rénovation"],
+    "driveId": "1I5ZeS10FazKfkGlj7oEC-v8NOkKPwTYP",
+    "selectedImages": [
+      "1LF-T84Fxl3lbnhbj-XYaRWDTSSdDoRYb",
+      "1C60afCDk1LNZC01P5kozz8iTRCVfxzWH",
+      "1OEiIGSNdkkuksOEliC9dAyVBbAia0CDO",
+      "18w-3cJ110X49mmcvER5Ph9hKTi5T0M9f",
+      "1BGOLgiljMaYVOI5ZcVXm3VgWPAG5fIvt",
+      "1OWPN1Y5xJn84KaldP8OJHPdIHPDY0tNF",
+      "1aHN0ZDyL0pHTWobwCu718a-j09WoZhmc",
+      "16gQszUvQFwp4CatOMZ02-pn6o7Mv0KPI"
+    ]
+  },
+  {
+    "id": "amenagement-sejour",
+    "num": "06",
+    "titre": "Aménagement Séjour",
+    "lieu": "Cotonou",
+    "type": "Design Intérieur",
+    "palette": "Habitation · Séjour",
+    "description": "Transformation complète du séjour d'une habitation privée. Palette de teintes naturelles, mobilier contemporain et éclairage d'ambiance pour un intérieur à la fois élégant et enveloppant.",
+    "tags": ["Séjour", "Résidentiel", "Mobilier"],
+    "driveId": "1Sm4oWPN73YzacFZZ3SdvspMZZmRaQCmU",
+    "selectedImages": [
+      "1_EfyzO2hq-WZFzJlAOcS6YAEwWewOJ2v",
+      "14TRcwON8SWeqLpGY02jBi__nDibnQgCz",
+      "1NkcPQUk8uaLbYklr0WGuaOoAkvp20xqD",
+      "1qVf3h6SzuOVvDMOlhHOsLMObzQG6cItB"
+    ]
+  },
+  {
+    "id": "seme-kpodji",
+    "num": "07",
+    "titre": "Villa Séme-Kpodji",
+    "lieu": "Séme-Kpodji",
+    "type": "Architecture Résidentielle",
+    "palette": "Villa · 280 m²",
+    "description": "Villa résidentielle implantée à Séme-Kpodji, combinant architecture contemporaine et matériaux locaux. Espaces de vie généreux, lumière naturelle maîtrisée et rapport intérieur-extérieur affirmé.",
+    "tags": ["Villa", "Architecture", "Résidentiel"],
+    "driveId": "12H8iTyU4itLft0ccf7U2XZWsCiWsgEFV",
+    "selectedImages": [
+      "1YRV6y4qksLjuT5B5NKEcbrPqFJWodN5l",
+      "1bGI1x0bhgDSRek9wGmJwjLINYLWH4JaY",
+      "12kuTjo1uIIHfIYMiSo6T7HK71Xnwamsb",
+      "1r_77wqgZx-D9I_Ce_82L9VYIsOSRj4K1",
+      "1WXaFroJQb0h0rRp3HUe1iuYqvYMXOAAX",
+      "1pl-VCuGYNeGzC3ehFwqw4HlqBc83fRes",
+      "17YUI4a1uL2ahdNBq5lLqj-Oa2EhXzBT1"
+    ]
+  },
+  {
+    "id": "appartement",
+    "num": "08",
+    "titre": "Appartement",
+    "lieu": "Cotonou",
+    "type": "Design Intérieur",
+    "palette": "Séjour · Chambre",
+    "description": "Aménagement complet d'un appartement — séjour et chambre principale. Un intérieur raffiné avec des teintes sourdes, des matières riches et une attention particulière au détail et à la lumière.",
+    "tags": ["Appartement", "Séjour", "Chambre"],
+    "driveId": "1yXdQxCqSfu1xjoJGzmBIrWvSdo17dTPg",
+    "selectedImages": [
+      "1VxuwWznfruzD6CcB-cUvSwNvSmqtHsTj",
+      "1VMYdJFxxevnxFfJ8iKoV4UpKw1rg0lE1",
+      "1ksgPLuHP-A8kapSnhNAwUwksbrSgc9wa",
+      "1RwizZ2bMki0XxQWubkZyC-oQyEgRJ2QY",
+      "1UPXexNqzR3kccb11VfMu-KYTFyuLoLac",
+      "1Tqvq1hM5HstJRR9KpOLNrKUBXMGMIyny"
+    ]
+  },
+  {
+    "id": "restaurant-houmba",
+    "num": "09",
+    "titre": "Restaurant Houmba Saka",
+    "lieu": "Cotonou",
+    "type": "Architecture Commerciale",
+    "palette": "Restaurant · Ambiance",
+    "description": "Conception et aménagement intérieur du restaurant Houmba Saka. Un espace gastronomique immersif mariant tradition béninoise et modernité, où l'atmosphère renforce l'expérience culinaire.",
+    "tags": ["Restaurant", "Commercial", "Gastronomie"],
+    "driveId": "1-HHLVlVpSA87lbSFBzDjj7qokk8m5_Ua",
+    "selectedImages": [
+      "13dqEeUAIy9U9UnSzR01K72KGqX-8RQB3",
+      "1dM3wDDdjFIAt7YzsCxZtORi7I0YriX08",
+      "1d6hm4rRqwHLnLnG9oSKLoUKg9V9cpOwV",
+      "1ARfWeAjlII48bgPi9IcCka3FWLb7xMg1",
+      "145X7wG2yg6rO95y6vu3DBXIbv63O8eWs",
+      "1K2z-8kvO4qko3v0Uw7F4DK_l0PEfZpBb",
+      "1AKjDHku_J5m8l_bX8P7crTFjw8_0qbdE"
+    ]
+  },
+  {
+    "id": "immeuble-r2",
+    "num": "10",
+    "titre": "Immeuble Résidentiel R+2",
+    "lieu": "Cotonou, Bénin",
+    "type": "Architecture Collective",
+    "palette": "R+2 · Logement Collectif",
+    "description": "Immeuble résidentiel collectif R+2 conçu et réalisé à Cotonou. Une architecture sobre et contemporaine qui répond aux enjeux du logement collectif en milieu urbain béninois, avec une façade soignée et des espaces bien proportionnés.",
+    "tags": ["Immeuble", "Résidentiel", "Architecture", "Collectif"],
+    "driveId": "1X3k6ApCXGGw6XLhnh30nykzouCccS-ms",
+    "selectedImages": [
+      "19FIKYPy04BeKLJCcqfHannPSPXqSJbNQ",
+      "184AFSmweBfxCcCE5YpwcuJ6WnVj6xV72",
+      "1KWRlQXNm2kB7e6plG831e_yLyE0Q7TsR"
+    ]
+  }
+]
