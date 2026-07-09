@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "choisir-son-iroko-avant-de-dessiner",
+    "categorie": "Méthode",
+    "titre": "Choisir son iroko avant de dessiner",
+    "excerpt": "Pourquoi le choix du bois précède le plan, et pas l'inverse.",
+    "date": "12 juin 2026",
+    "temps": "4 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": [
+      { "type": "p", "text": "Sur la plupart de nos chantiers, la question du bois arrive trop tard — une fois les ouvertures dessinées, la structure figée. Nous avons pris l'habitude inverse : choisir la grume avant le plan." },
+      { "type": "p", "text": "L'iroko qu'on trouve à Cotonou n'a pas la teinte régulière des catalogues européens. Chaque lot a sa propre densité de veinage, sa réaction propre à l'humidité de saison des pluies. Dessiner avec cette variabilité, plutôt que la corriger, change la façon de détailler une menuiserie extérieure." },
+      { "type": "quote", "text": "On ne dessine pas une baie vitrée de la même façon selon qu'elle sera encadrée d'iroko clair ou d'iroko brûlé par le soleil de midi." },
+      { "type": "p", "text": "C'est un renversement simple mais rarement appliqué : la matière comme point de départ du dessin, pas comme habillage final. Sur Villa Latérite, ce choix a directement dicté la profondeur de la véranda côté piscine." }
+    ]
+  },
+  {
+    "slug": "ce-que-la-saison-des-pluies-impose",
+    "categorie": "Chantier",
+    "titre": "Ce que la saison des pluies impose",
+    "excerpt": "Drainage, pentes, débords de toit — les décisions qu'on ne voit pas.",
+    "date": "28 mai 2026",
+    "temps": "6 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": null
+  },
+  {
+    "slug": "pourquoi-si-peu-de-blanc-pur",
+    "categorie": "Regard",
+    "titre": "Pourquoi si peu de blanc pur",
+    "excerpt": "La lumière de Cotonou ne pardonne pas le blanc de studio.",
+    "date": "09 mai 2026",
+    "temps": "3 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": null
+  },
+  {
+    "slug": "le-patio-comme-climatiseur",
+    "categorie": "Méthode",
+    "titre": "Le patio comme climatiseur",
+    "excerpt": "Retour sur trois villas organisées autour d'un vide central.",
+    "date": "22 avril 2026",
+    "temps": "5 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": null
+  },
+  {
+    "slug": "laterite-de-la-carriere-au-mur",
+    "categorie": "Chantier",
+    "titre": "Latérite : de la carrière au mur",
+    "excerpt": "Un matériau local, de son extraction à sa mise en œuvre.",
+    "date": "30 mars 2026",
+    "temps": "7 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": null
+  },
+  {
+    "slug": "dessiner-pour-un-client-pas-pour-un-portfolio",
+    "categorie": "Regard",
+    "titre": "Dessiner pour un client, pas pour un portfolio",
+    "excerpt": "Sur la tentation de l'image spectaculaire.",
+    "date": "14 mars 2026",
+    "temps": "4 min",
+    "auteur": "Mathieu — Fondateur",
+    "image": null,
+    "corps": null
+  }
+]

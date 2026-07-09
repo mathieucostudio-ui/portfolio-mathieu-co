@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Newsreader, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import ScrollProgressBar from '@/components/ScrollProgressBar'
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -59,7 +60,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollProgressBar />
+        {children}
+      </body>
     </html>
   )
 }

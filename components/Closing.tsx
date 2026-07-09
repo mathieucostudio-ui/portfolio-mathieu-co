@@ -1,50 +1,74 @@
-'use client'
+import Link from 'next/link'
+import { Projet } from '@/lib/projets'
+import RevealOnScroll from './RevealOnScroll'
 
-import { motion } from 'framer-motion'
+interface ClosingProps {
+  projets: Projet[]
+}
 
-export default function Closing() {
+// Email réel du studio conservé (déjà en prod) — le handoff utilise un
+// domaine placeholder ("contact@mathieuandco.studio") qui n'existe pas
+// réellement, contrairement aux quartiers ci-dessous qui sont dérivés des
+// vraies données projet plutôt que recopiés en dur du prototype.
+const CONTACT_EMAIL = 'mathieu.co.studio@gmail.com'
+
+export default function Closing({ projets }: ClosingProps) {
+  const quartiers = Array.from(new Set(projets.map((p) => p.lieu.split(',')[0].trim()))).sort()
+
   return (
-    <section className="bg-ebene py-32 px-8 md:px-16 border-t border-white/5">
-      <div className="max-w-screen-xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="text-center max-w-2xl mx-auto"
-        >
-          <p className="font-cormorant text-5xl md:text-6xl font-light italic text-blanc leading-tight mb-12">
-            "L'espace façonne l'homme.
-            <br />
-            <span className="text-sable">Faisons-le avec intention."</span>
-          </p>
-
-          <div className="w-16 h-px bg-sable/40 mx-auto mb-10" />
-
-          <p className="font-cormorant text-2xl font-light text-blanc/60 tracking-widest">
-            Mathieu<span className="text-sable">&amp;</span>Co
-          </p>
-          <p className="font-montserrat text-[10px] tracking-[0.3em] uppercase text-blanc/25 mt-3">
-            Studio d'Architecture &amp; Design d'Intérieur
-          </p>
-          <p className="font-montserrat text-[10px] tracking-[0.25em] uppercase text-blanc/20 mt-1">
-            Cotonou, Bénin · 2025–2026
-          </p>
-        </motion.div>
-
-        {/* Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between mt-24 pt-8 border-t border-white/5">
-          <p className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20">
-            © 2026 Mathieu&amp;Co — Tous droits réservés
-          </p>
-          <a
-            href="mailto:mathieu.co.studio@gmail.com"
-            className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20 hover:text-sable transition-colors mt-4 md:mt-0"
-          >
-            mathieu.co.studio@gmail.com
-          </a>
-        </div>
+    <>
+      <div className="py-[100px] px-10 bg-paper-alt text-center">
+        <RevealOnScroll>
+          <div className="font-display italic font-medium text-[clamp(26px,3.4vw,38px)] leading-[1.35] max-w-[760px] mx-auto text-ink">
+            « Dessiner une maison pour Cotonou, c&apos;est dessiner pour sa lumière — pas contre
+            elle. »
+          </div>
+          <div className="mt-5 font-mono text-[11px] tracking-[0.1em] uppercase text-ink-40">
+            Mathieu — Fondateur
+          </div>
+        </RevealOnScroll>
       </div>
-    </section>
+
+      <footer className="pt-16 px-10 pb-10 border-t border-hairline">
+        <div
+          className="grid gap-8 mb-12"
+          style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}
+        >
+          <div>
+            <div className="font-display italic font-medium text-xl mb-2.5 text-ink">
+              Mathieu&amp;Co
+            </div>
+            <div className="font-ui text-xs leading-relaxed text-ink-60">
+              Architecture &amp; design d&apos;intérieur
+              <br />
+              Cotonou, Bénin
+            </div>
+          </div>
+          <div className="flex flex-col gap-2.5 font-ui font-medium text-xs">
+            <Link href="/#sommaire" className="hover:text-accent transition-colors">
+              Projets
+            </Link>
+            <Link href="/#studio" className="hover:text-accent transition-colors">
+              Studio
+            </Link>
+            <Link href="/journal" className="hover:text-accent transition-colors">
+              Journal
+            </Link>
+            <Link href="/contact" className="hover:text-accent transition-colors">
+              Contact
+            </Link>
+          </div>
+          <div className="font-ui text-xs leading-loose text-ink-60">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-accent transition-colors">
+              {CONTACT_EMAIL}
+            </a>
+          </div>
+        </div>
+        <div className="pt-6 border-t border-hairline flex justify-between flex-wrap gap-3 font-mono text-[10px] text-ink-40">
+          <span>© 2026 Mathieu&amp;Co Studio</span>
+          <span>{quartiers.join(' · ')}</span>
+        </div>
+      </footer>
+    </>
   )
 }

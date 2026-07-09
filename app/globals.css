@@ -77,3 +77,21 @@ body {
   );
   background-color: var(--bg-alt);
 }
+
+/* Séquence d'intro du Hero — traits qui se dessinent puis logo qui apparaît */
+@keyframes lineDraw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
