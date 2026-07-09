@@ -1,21 +1,40 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Montserrat } from 'next/font/google'
+import { Newsreader, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({
+const newsreader = Newsreader({
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
+  weight: ['400', '500', '600'],
   style: ['normal', 'italic'],
-  variable: '--font-cormorant',
+  variable: '--font-display',
   display: 'swap',
 })
 
-const montserrat = Montserrat({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ui',
   display: 'swap',
 })
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-mono',
+  display: 'swap',
+})
+
+// Applique le thème (localStorage) avant le premier paint pour éviter un
+// flash clair/sombre. Défaut clair si rien n'est stocké (décision produit :
+// pas de détection prefers-color-scheme).
+const themeInitScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    if (stored === 'dark') document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`
 
 export const metadata: Metadata = {
   title: "Mathieu&Co — Studio d'Architecture & Design d'Intérieur",
@@ -33,7 +52,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html
+      lang="fr"
+      className={`${newsreader.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body>{children}</body>
     </html>
   )

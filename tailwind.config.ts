@@ -1,6 +1,11 @@
 import type { Config } from 'tailwindcss'
 
+// Couleurs mappées sur les variables CSS sémantiques (app/globals.css :root/.dark),
+// pas des hex figés : mêmes noms de token en clair et en sombre, seule la
+// valeur change via la classe .dark (voir Tokens.dc.html du handoff design,
+// section "variables sémantiques").
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,31 +14,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ebene: '#1A1A1A',
-        sable: '#C8B89A',
-        creme: '#F5F2ED',
-        blanc: '#FFFFFF',
-        gris: '#8A8A8A',
-        charbon: '#242424',
+        paper: {
+          DEFAULT: 'var(--bg)',
+          alt: 'var(--bg-alt)',
+        },
+        ink: {
+          DEFAULT: 'var(--ink)',
+          60: 'var(--ink-60)',
+          40: 'var(--ink-40)',
+        },
+        hairline: 'var(--hairline)',
+        accent: 'var(--accent)',
       },
       fontFamily: {
-        cormorant: ['var(--font-cormorant)', 'serif'],
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        display: ['var(--font-display)', 'serif'],
+        ui: ['var(--font-ui)', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
-      animation: {
-        'fade-up': 'fadeUp 0.8s ease-out forwards',
-        'fade-in': 'fadeIn 1s ease-out forwards',
-        'count-up': 'countUp 1.5s ease-out forwards',
+      borderRadius: {
+        DEFAULT: '2px',
       },
-      keyframes: {
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
+      transitionTimingFunction: {
+        reveal: 'cubic-bezier(.16,1,.3,1)',
+      },
+      transitionDuration: {
+        reveal: '600ms',
       },
     },
   },

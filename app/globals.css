@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tokens.dc.html — variables sémantiques, copiées verbatim. Mêmes noms en
+   clair (:root) et en sombre (.dark), seules les valeurs changent. */
 :root {
-  --ebene: #1a1a1a;
-  --sable: #c8b89a;
-  --creme: #f5f2ed;
-  --blanc: #ffffff;
-  --gris: #8a8a8a;
-  --charbon: #242424;
+  --bg: #f5f1e8;
+  --bg-alt: #ede7da;
+  --ink: #1e1b17;
+  --ink-60: rgba(30, 27, 23, 0.6);
+  --ink-40: rgba(30, 27, 23, 0.4);
+  --hairline: rgba(30, 27, 23, 0.12);
+  --accent: #b5502e;
+  --radius: 2px;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-reveal: 600ms;
+}
+.dark {
+  --bg: #14283a;
+  --bg-alt: #0f2030;
+  --ink: #efeae2;
+  --ink-60: rgba(239, 234, 226, 0.6);
+  --ink-40: rgba(239, 234, 226, 0.4);
+  --hairline: rgba(239, 234, 226, 0.14);
+  --accent: #c9714e;
 }
 
 * {
@@ -22,11 +37,15 @@ html {
 }
 
 body {
-  background-color: var(--ebene);
-  color: var(--blanc);
-  font-family: var(--font-montserrat), sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s, color 0.4s;
+  /* Grain papier — radial-gradient très subtil répété 3x3px */
+  background-image: radial-gradient(var(--ink-40) 1px, transparent 1px);
+  background-size: 3px 3px;
 }
 
 /* Scrollbar */
@@ -34,20 +53,27 @@ body {
   width: 3px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--ebene);
+  background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--sable);
+  background: var(--accent);
   border-radius: 2px;
 }
 
 /* Selection */
 ::selection {
-  background: var(--sable);
-  color: var(--ebene);
+  background: var(--accent);
+  color: var(--bg);
 }
 
-/* Image placeholder */
+/* Image placeholder — rayures diagonales, en attendant la vraie image Drive */
 .img-placeholder {
-  background: linear-gradient(135deg, var(--charbon) 0%, #2a2a2a 100%);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--hairline),
+    var(--hairline) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+  background-color: var(--bg-alt);
 }
