@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '@/components/Navbar'
 import JournalFilters from '@/components/JournalFilters'
 import JournalCard from '@/components/JournalCard'
 import { getAllArticles } from '@/lib/journal'
@@ -14,8 +13,6 @@ export default function JournalPage() {
 
   return (
     <main className="bg-paper min-h-screen">
-      <Navbar />
-
       <header className="pt-40 px-10 pb-14">
         <div className="font-mono text-[11px] tracking-[0.14em] text-accent uppercase mb-4.5">
           Nouveau — Section Journal

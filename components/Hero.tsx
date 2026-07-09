@@ -237,14 +237,14 @@ export default function Hero({ heroImages }: HeroProps) {
         <button
           onClick={prevSlide}
           aria-label="Précédent"
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-[4] p-3 font-ui font-light text-3xl text-ink"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-[4] p-3 font-ui font-light text-3xl text-ink transition-[color,transform] duration-150 hover:text-accent hover:-translate-x-0.5 active:scale-90"
         >
           ‹
         </button>
         <button
           onClick={nextSlide}
           aria-label="Suivant"
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-[4] p-3 font-ui font-light text-3xl text-ink"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-[4] p-3 font-ui font-light text-3xl text-ink transition-[color,transform] duration-150 hover:text-accent hover:translate-x-0.5 active:scale-90"
         >
           ›
         </button>

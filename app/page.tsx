@@ -1,6 +1,5 @@
 import { getAllProjets, Projet } from '@/lib/projets'
 import { getImagesFromFolder } from '@/lib/drive'
-import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Sommaire from '@/components/Sommaire'
 import Studio from '@/components/Studio'
@@ -47,7 +46,6 @@ export default async function Home() {
 
   return (
     <main className="bg-paper min-h-screen">
-      <Navbar />
       <Hero heroImages={heroImages} />
       <section id="sommaire">
         <Sommaire projets={projetsWithThumbnails} />

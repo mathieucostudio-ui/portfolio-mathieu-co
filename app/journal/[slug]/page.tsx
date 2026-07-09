@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
 import MinimalFooter from '@/components/MinimalFooter'
 import { getAllArticles, getArticleBySlug, getAdjacentArticles } from '@/lib/journal'
 
@@ -39,8 +38,6 @@ export default async function JournalArticlePage({
 
   return (
     <main className="bg-paper min-h-screen">
-      <Navbar />
-
       <article className="max-w-[720px] mx-auto px-10 pt-40">
         <Link
           href="/journal"

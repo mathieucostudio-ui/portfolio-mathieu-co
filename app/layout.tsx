@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
+import { MotionConfig } from 'framer-motion'
 import { Newsreader, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import ScrollProgressBar from '@/components/ScrollProgressBar'
+import Navbar from '@/components/Navbar'
+import PageTransition from '@/components/PageTransition'
 
 const newsreader = Newsreader({
   subsets: ['latin'],
@@ -61,8 +64,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body>
-        <ScrollProgressBar />
-        {children}
+        <MotionConfig reducedMotion="user">
+          <ScrollProgressBar />
+          <Navbar />
+          <PageTransition>{children}</PageTransition>
+        </MotionConfig>
       </body>
     </html>
   )

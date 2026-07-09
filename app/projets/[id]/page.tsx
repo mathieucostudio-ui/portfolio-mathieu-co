@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getAllProjets, getProjetById, getAdjacentProjets } from '@/lib/projets'
 import { getImagesFromFolder } from '@/lib/drive'
-import Navbar from '@/components/Navbar'
 import ProjetIntro from '@/components/ProjetIntro'
 import Demarche from '@/components/Demarche'
 import Galerie from '@/components/Galerie'
@@ -66,7 +65,6 @@ export default async function ProjetPage({
 
   return (
     <main className="bg-paper min-h-screen">
-      <Navbar />
       <ProjetIntro projet={projet} heroImage={heroImage} />
       <Demarche images={galerieImages.map((img) => img.url)} />
       <Galerie images={galerieImages} />

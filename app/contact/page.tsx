@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar'
 import ContactForm from '@/components/ContactForm'
 import MinimalFooter from '@/components/MinimalFooter'
 
@@ -16,8 +15,6 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="bg-paper min-h-screen">
-      <Navbar />
-
       <section
         className="pt-40 px-10 pb-24 grid gap-16 max-w-[1180px] mx-auto"
         style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))' }}
