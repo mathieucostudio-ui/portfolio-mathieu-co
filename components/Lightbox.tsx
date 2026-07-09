@@ -59,19 +59,22 @@ export default function Lightbox({ images, initialIndex, onClose }: LightboxProp
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-[100] bg-ebene/97 flex items-center justify-center overflow-hidden"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden"
+      style={{ background: 'rgba(30,27,23,.97)' }}
       onClick={onClose}
     >
-      {/* Close */}
+      {/* Lightbox : overlay toujours sombre, texte toujours clair, peu importe
+          le thème du site (cf. Projet.dc.html — lightboxInk fixe, pas lié
+          aux tokens paper/ink theme-reactifs) */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-8 font-montserrat text-[10px] tracking-[0.3em] uppercase text-blanc/40 hover:text-sable transition-colors z-10 flex items-center gap-2"
+        className="absolute top-6 right-8 font-ui text-[10px] tracking-[0.3em] uppercase text-[#efeae2]/60 hover:text-[#c9714e] transition-colors z-10 flex items-center gap-2"
       >
         Fermer <span className="text-lg">×</span>
       </button>
 
       {/* Counter */}
-      <div className="absolute top-6 left-8 font-montserrat text-[10px] tracking-[0.25em] uppercase text-blanc/30 z-10">
+      <div className="absolute top-6 left-8 font-mono text-[10px] tracking-[0.1em] uppercase text-[#efeae2]/45 z-10">
         {String(current + 1).padStart(2, '0')} / {String(images.length).padStart(2, '0')}
       </div>
 
@@ -84,7 +87,7 @@ export default function Lightbox({ images, initialIndex, onClose }: LightboxProp
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.32, ease: [0.25, 0.1, 0.25, 1] }}
           className="absolute w-full h-full max-w-5xl max-h-[80vh] mx-auto px-16 cursor-grab active:cursor-grabbing"
           drag={images.length > 1 ? 'x' : false}
           dragConstraints={{ left: 0, right: 0 }}
@@ -112,13 +115,13 @@ export default function Lightbox({ images, initialIndex, onClose }: LightboxProp
         <>
           <button
             onClick={(e) => { e.stopPropagation(); prev() }}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-white/10 text-blanc/50 hover:border-sable hover:text-sable transition-all duration-300 z-10"
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-[#efeae2]/10 text-[#efeae2]/50 hover:border-[#c9714e] hover:text-[#c9714e] transition-all duration-300 z-10"
           >
             ←
           </button>
           <button
             onClick={(e) => { e.stopPropagation(); next() }}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-white/10 text-blanc/50 hover:border-sable hover:text-sable transition-all duration-300 z-10"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center border border-[#efeae2]/10 text-[#efeae2]/50 hover:border-[#c9714e] hover:text-[#c9714e] transition-all duration-300 z-10"
           >
             →
           </button>
@@ -133,7 +136,7 @@ export default function Lightbox({ images, initialIndex, onClose }: LightboxProp
               key={i}
               onClick={(e) => { e.stopPropagation(); goTo(i) }}
               className={`h-0.5 transition-all duration-300 ${
-                i === current ? 'w-8 bg-sable' : 'w-4 bg-white/20 hover:bg-white/40'
+                i === current ? 'w-8 bg-[#c9714e]' : 'w-4 bg-[#efeae2]/20 hover:bg-[#efeae2]/40'
               }`}
             />
           ))}

@@ -3,6 +3,7 @@ import { getAllProjets, getProjetById, getAdjacentProjets } from '@/lib/projets'
 import { getImagesFromFolder } from '@/lib/drive'
 import Navbar from '@/components/Navbar'
 import ProjetIntro from '@/components/ProjetIntro'
+import Demarche from '@/components/Demarche'
 import Galerie from '@/components/Galerie'
 import ProjetNav from '@/components/ProjetNav'
 import type { Metadata } from 'next'
@@ -64,10 +65,11 @@ export default async function ProjetPage({
   const galerieImages = images.slice(1)
 
   return (
-    <main className="bg-ebene min-h-screen">
+    <main className="bg-paper min-h-screen">
       <Navbar />
-      <ProjetIntro projet={projet} heroImage={heroImage} allImages={images} />
-      {galerieImages.length > 0 && <Galerie images={galerieImages} allImages={images} heroCount={1} />}
+      <ProjetIntro projet={projet} heroImage={heroImage} />
+      <Demarche images={galerieImages.map((img) => img.url)} />
+      <Galerie images={galerieImages} />
       <ProjetNav prev={prev} next={next} />
     </main>
   )

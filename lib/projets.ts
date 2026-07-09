@@ -13,6 +13,8 @@ export interface Projet {
   heroImageId?: string
   selectedImages?: string[]
   thumbnail?: string | null
+  surface?: string | null
+  livraison?: string | null
 }
 
 export function getAllProjets(): Projet[] {
