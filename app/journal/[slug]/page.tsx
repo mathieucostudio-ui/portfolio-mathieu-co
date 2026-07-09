@@ -3,9 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
-import Closing from '@/components/Closing'
+import MinimalFooter from '@/components/MinimalFooter'
 import { getAllArticles, getArticleBySlug, getAdjacentArticles } from '@/lib/journal'
-import { getAllProjets } from '@/lib/projets'
 
 export const revalidate = 3600
 
@@ -37,7 +36,6 @@ export default async function JournalArticlePage({
   if (!article) notFound()
 
   const { prev, next } = getAdjacentArticles(slug)
-  const projets = getAllProjets()
 
   return (
     <main className="bg-paper min-h-screen">
@@ -125,7 +123,7 @@ export default async function JournalArticlePage({
         )}
       </section>
 
-      <Closing projets={projets} />
+      <MinimalFooter />
     </main>
   )
 }

@@ -2,14 +2,11 @@
 
 import { useState } from 'react'
 import Navbar from '@/components/Navbar'
-import Closing from '@/components/Closing'
 import JournalFilters from '@/components/JournalFilters'
 import JournalCard from '@/components/JournalCard'
 import { getAllArticles } from '@/lib/journal'
-import { getAllProjets } from '@/lib/projets'
 
 const articles = getAllArticles()
-const projets = getAllProjets()
 
 export default function JournalPage() {
   const [filter, setFilter] = useState('Tous')
@@ -46,8 +43,6 @@ export default function JournalPage() {
           ))}
         </div>
       </section>
-
-      <Closing projets={projets} />
     </main>
   )
 }
