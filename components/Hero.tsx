@@ -101,7 +101,7 @@ export default function Hero({ heroImages }: HeroProps) {
   }`
 
   return (
-    <header className="relative flex flex-col bg-paper" style={{ minHeight: 'max(640px, 100vh)' }}>
+    <header className="relative bg-paper" style={{ minHeight: 'max(640px, 100vh)' }}>
       {introPhase !== 'done' && (
         <div
           className="fixed inset-0 z-[100] bg-paper flex items-center justify-center transition-opacity duration-[650ms]"
@@ -134,7 +134,7 @@ export default function Hero({ heroImages }: HeroProps) {
       )}
 
       <div
-        className="relative flex-1 min-h-0 overflow-hidden"
+        className="absolute inset-0 overflow-hidden"
         onWheel={handleWheel}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -224,11 +224,6 @@ export default function Hero({ heroImages }: HeroProps) {
           </div>
         ))}
 
-        <div
-          className="absolute left-0 right-0 bottom-0 z-[3] pointer-events-none"
-          style={{ height: '55%', background: 'linear-gradient(to bottom, transparent, var(--bg) 92%)' }}
-        />
-
         <div className="absolute right-10 top-[110px] z-[3] text-right pointer-events-none">
           <div className="w-16 h-px bg-accent ml-auto" />
           <div className="mt-1.5 font-mono text-[10px] text-accent tracking-[0.08em]">N.01 — COTONOU</div>
@@ -250,7 +245,10 @@ export default function Hero({ heroImages }: HeroProps) {
         </button>
       </div>
 
-      <div className="relative flex-none z-[3] px-10 pb-[72px]">
+      <div
+        className="absolute left-0 right-0 bottom-0 z-[6] px-10 pt-[150px] pb-[72px]"
+        style={{ background: 'linear-gradient(to bottom, transparent, var(--bg) 150px)' }}
+      >
         <div className="flex items-center gap-3.5 mb-7">
           <span className="font-mono text-[10px] tracking-[0.08em] text-ink-40 uppercase">{activeCounter}</span>
           <div className="flex gap-2">
