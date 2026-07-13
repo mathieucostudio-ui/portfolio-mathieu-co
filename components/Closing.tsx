@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export default function Closing() {
@@ -33,16 +34,24 @@ export default function Closing() {
         </motion.div>
 
         {/* Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between mt-24 pt-8 border-t border-white/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mt-24 pt-8 border-t border-white/5">
           <p className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20">
             © 2026 Mathieu&amp;Co — Tous droits réservés
           </p>
-          <a
-            href="mailto:mathieu.co.studio@gmail.com"
-            className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20 hover:text-sable transition-colors mt-4 md:mt-0"
-          >
-            mathieu.co.studio@gmail.com
-          </a>
+          <div className="flex items-center gap-6">
+            <Link
+              href="/privacy"
+              className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20 hover:text-sable transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <a
+              href="mailto:mathieu.co.studio@gmail.com"
+              className="font-montserrat text-[9px] tracking-[0.2em] uppercase text-blanc/20 hover:text-sable transition-colors"
+            >
+              mathieu.co.studio@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </section>
